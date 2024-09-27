@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Cartoon Website</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Neue', sans-serif;
+            background: url('images/2207_w023_n003_2757b_p1_2757.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #9ed9fd;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(73, 168, 205, 0.32); /* Semi-transparent */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        
+        /* Title Styles */
+        .title {
+            font-size: 3.5rem;
+            font-family: 'Bangers', cursive;
+            color: #FFF;
+            text-align: center;
+            animation: bounce 3s infinite ease-in-out;
+        }
+        
+        /* Bouncing Title Animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Social Icons Positioned to the Right */
+        .social-icons {
+            font-size: 1.5rem;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .social-icons a {
+            color: #FFF;
+            margin-left: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Container for Image and Text Box */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        /* Image Styles */
+        .image-box img {
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text Box Styles */
+        .text-box {
+            width: 25%;
+            padding: 20px;
+            background-color: rgba(73, 168, 205, 0.5);
+            color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-left: 40px;
+        }
+
+        /* Scrollable Section */
+        .scrollable-section {
+            display: flex;
+            align-items: center;
+            margin: 40px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .scrollable-section img {
+            width: 554px;
+            height: 384px;
+            margin: 0 10px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .scrollable-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .arrow {
+            font-size: 2.5rem;
+            color: #8D7B68;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow:hover {
+            transform: scale(1.2);
+        }
+
+        .scrollable-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Two Box Section */
+        .two-boxes {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 45%;
+            min-width: 250px;
+            height: 200px;
+            background-color: rgba(73, 168, 205, 0.5);
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-content {
+            max-width: 80%;
+        }
+
+        .box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .box p {
+            font-size: 1rem;
+            color: #FFF;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .text-box {
+                width: 90%;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .two-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="title">Most Valuable Asset</div>
+        <div class="social-icons">
+            <a href="https://x.com/rwat_sol" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/+I_vrvymkNP04NDk0" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <!-- Image and Text Section -->
+    <div class="content">
+        <div class="image-box">
+            <img src="images/health-removebg-preview.png" alt="Health Image">
+        </div>
+        <div class="text-box">
+            <h1>$HEALTH</h1>
+            <p>Most valuable asset, encompassing physical, mental, and emotional well-being. Prioritizing a balanced diet, regular exercise, and mental wellness enhances quality of life and longevity.</p>
+        </div>
+    </div>
+
+    <!-- Scrollable Image Section -->
+    <div class="scrollable-section">
+        <span class="arrow" id="left-arrow">&#8592;</span>
+        <div id="scroll-container">
+            <img src="images/3d3f93740b58342d646e75eae50c7e00.jpg" alt="Image 1">
+            <img src="images/6118bb504bb0c1e8707437ac98bb12bf.jpg" alt="Image 2">
+            <img src="images/63dcccf8ed2faedf7fd58c6ce6cf91c5.jpg" alt="Image 3">
+            <img src="images/91db7589b43d91895aa5b7d1a22d2bd1.jpg" alt="Image 4">
+            <img src="images/6e6f6e59f19acceba8e554dafc9a0c6c.jpg" alt="Image 5">
+            <img src="images/a263b35837d2204c5a3ddbe5fade0fb7.jpg" alt="Image 6">
+            <img src="images/e3e5fc1bd149a007ccc6c9a15ba3debc.jpg" alt="Image 7">
+        </div>
+        <span class="arrow" id="right-arrow">&#8594;</span>
+    </div>
+
+    <!-- Two Box Section -->
+    <div class="two-boxes">
+        <div class="box">
+            <div class="box-content">
+                <h2>UTILITY</h2>
+                <p>HEALTH COLLECTION SUPPLY : 1.000.000.000</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>UTILITY</h2>
+                <p>Token % divided: 5% DEV, 95% driven iykyk</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Scrollable Image Section -->
+    <script>
+        const scrollContainer = document.getElementById('scroll-container');
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+
+        rightArrow.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+
+        leftArrow.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
